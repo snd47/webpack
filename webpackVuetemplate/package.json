@@ -9,7 +9,7 @@
   },
   "author": "Snd",
   "license": "MIT",
-  "dependencies": {},
+   "dependencies": {},
   "devDependencies": {
     "path": "^0.12.7",
     "webpack": "^4.39.1",
