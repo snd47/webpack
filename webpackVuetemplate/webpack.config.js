@@ -1,5 +1,8 @@
 
+// all require -> json
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
 module.exports = {
     entry :{
         app: './src/index.js'
@@ -21,7 +24,29 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: 'css-loader',
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader"
+                ]
+                
+            
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    MiniCssExtractPlugin.loader,
+                    
+                    {
+                        loader:'css-loader',
+                        options: {sourceMap: true}
+                    },
+                    {
+                        loader:'sass-loader',
+                        options: {sourceMap: true}
+                    }
+                ]
+                
             
             }
         ]
@@ -30,5 +55,14 @@ module.exports = {
     devServer: {
         // warnings
         overlay: true
-    }
+    },
+
+    plugins: [
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: '[name].css' // entry -> app.css will be
+            
+          })
+    ]
 }
