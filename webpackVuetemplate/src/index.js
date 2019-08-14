@@ -8,8 +8,10 @@ import './scss/main.scss'
 //import 'vue'
 
 // 2
-import Vue from 'vue'
-Vue.use()
+// import Vue from 'vue'
+// Vue.use()
 
-// window.Vue = require('vue')
+//3
+window.Vue = require('vue')
 
+Vue.component('example-component', require('./'))
