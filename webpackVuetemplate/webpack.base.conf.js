@@ -1,18 +1,35 @@
 
 // all require -> json
+
+//  include path as module
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const PATHS = {
+    src: path.join(__dirname, './src'),
+    dist: path.join(__dirname, './dist'),
+    assets: 'assets/'
+}
+
 module.exports = {
+    // export const (such as PATHS) to other conf
+    externals: {
+        paths:PATHS
+    },
     entry :{
-        app: './src/index.js'
+        app: PATHS.src
+        // app: './src/index.js'
         // second: './src/index.js'
     },
     output: {
-        // main.js -> [name].js -> app.js
-        filename: '[name].js',
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist'
+    // main.js -> [name].js -> app.js
+        // filename: '[name].js',
+        // path: path.resolve(__dirname, './dist'),
+        // publicPath: '/dist'
+            filename: `${PATHS.assets}js/[name].js`,
+            path: PATHS.dist,
+            publicPath: '/'
+
     },
     
     module: {
