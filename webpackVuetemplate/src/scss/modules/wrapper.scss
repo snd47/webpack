@@ -1,0 +1,13 @@
+.wrapper_example {
+    display:flex;
+    h1 {
+        font-size: rem(20);
+    }
+}
+
+#main {
+    background-image: url('/assets/img/puppy_sad.jpg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    width: 100%
+}

@@ -1,5 +1,5 @@
 <template>
-    <section id="main">
+    <section >
         <div class="container">
             <h1>Webpack component</h1>
         </div>

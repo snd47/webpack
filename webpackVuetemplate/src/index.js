@@ -14,6 +14,6 @@ import './scss/main.scss'
 //3
 window.Vue = require('vue')
 
-Vue.component('example-component', require('./'))
+// Vue.component('example-component', require('./'))
 
 // Vue.component('example-component', require('./components/Example.vue').default)
