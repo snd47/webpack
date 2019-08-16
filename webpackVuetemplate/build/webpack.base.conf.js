@@ -9,9 +9,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const PATHS = {
-    src: path.join(__dirname, './src'),
-    dist: path.join(__dirname, './dist'),
+    src: path.join(__dirname, '../src'),
+    dist: path.join(__dirname, '../dist'),
+    // dist: path.join(__dirname, '../public'),
     assets: 'assets/'
+    // assets: 'static/'
 }
 
 module.exports = {
@@ -61,7 +63,7 @@ module.exports = {
                     },
                     {
                         loader:'postcss-loader',
-                        options: {sourceMap: true, config: {path:'src/js/postcss.config.js'}}
+                        options: {sourceMap: true, config: {path:`${PATHS.src}/js/postcss.config.js`}}
                     },
                     {
                         loader:'sass-loader',
@@ -84,7 +86,7 @@ module.exports = {
                     },
                     {
                         loader:'postcss-loader',
-                        options: {sourceMap: true, config: {path:'src/js/postcss.config.js'}}
+                        options: {sourceMap: true, config: {path:`${PATHS.src}/js/postcss.config.js`}}
                     }
                   
                 ]
