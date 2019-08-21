@@ -1,7 +1,7 @@
 <template>
     <section >
         <div class="container">
-            <h1>Webpack component</h1>
+            <h1>Webpack, vue component</h1>
         </div>
        
     </section>
