@@ -17,7 +17,7 @@
         }
     },
     created() {
-        this.message = 'hello component'
+        this.message = this.$store.getters.getMessage
     }
 }
 </script>

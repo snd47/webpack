@@ -14,10 +14,15 @@ import './scss/main.scss'
 //3
 window.Vue = require('vue')
 
+import store from './store'
+// import './store'
+
 // Vue.component('example-component', require('./'))
 
 Vue.component('example-component', require('./components/Example.vue').default)
 
 const app = new Vue({
+    // store:store,
+    store,
     el:'#app'
 })
