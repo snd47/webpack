@@ -6,7 +6,7 @@ Vue.use(Vuex)
 import example from './example'
 
 export default new Vuex.Store({
-    module: {
+    modules: {
         example
     }
 })
