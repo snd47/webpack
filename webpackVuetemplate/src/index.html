@@ -29,10 +29,12 @@
                     <div class="wrapper_example">
                         <div class="container">
                             <h1>Example second section</h1>
+                            <button @click="component= !component">Show vue component</button>
+
                         </div>
                     </div>
                 </section>
-                <example-component></example-component>
+                <example-component v-if="component"></example-component>
                 <footer>
                     
                 </footer>
