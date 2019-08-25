@@ -38,7 +38,19 @@ module.exports = {
             publicPath: '/'
 
     },
-    
+    optimization: {
+            splitChunks: {
+                cacheGroups: {
+                    vendor: {
+                        //not local
+                        name: 'vendors',
+                        test: /node_modules/,
+                        chunks: 'all',
+                        enforce: true
+                    }
+                }
+            }
+    },
     module: {
         rules: [
             {

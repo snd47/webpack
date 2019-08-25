@@ -9,36 +9,42 @@
 <link href="/assets/css/app.css" rel="stylesheet"></head>
 <body>
     <div class="wrapper">
-        <header>
+        <div id="app">
+            <header>
 
-        </header>
+            </header>
 
-        <div class="content-wrapper">
-            <section id="main">
-                <div class="container">
-                    <h1>Webpack</h1>
-                    <!-- better use html for img like that, not css-->
-                    <img src="/assets/img/puppy_glad.jpg" alt="puppy_glad.jpg">
-                </div>
-               
-            
-            </section>
-            
-            <section id="main">
-                <div class="wrapper_example">
+            <div class="content-wrapper">
+                <section id="main">
                     <div class="container">
-                        <h1>Example second section</h1>
+                        <h1>Webpack</h1>
+                        <!-- better use html for img like that, not css-->
+                        <img src="/assets/img/puppy_glad.jpg" alt="puppy_glad.jpg">
                     </div>
-                </div>
-            </section>
-            <footer>
                 
-            </footer>
+                
+                </section>
+                
+                <section>
+                    <div class="wrapper_example">
+                        <div class="container">
+                            <h1>Example second section</h1>
+                            <button @click="component= !component">Show vue component</button>
+
+                        </div>
+                    </div>
+                </section>
+                <example-component v-if="component"></example-component>
+                <footer>
+                    
+                </footer>
+            </div>
+            
         </div>
         
     </div>
     
 
     <!-- <script src="/dist/app.js"></script> -->
-<script type="text/javascript" src="/assets/js/app.js"></script></body>
+<script type="text/javascript" src="/assets/js/vendors.js"></script><script type="text/javascript" src="/assets/js/app.js"></script></body>
 </html>
