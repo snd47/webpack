@@ -24,16 +24,17 @@ module.exports = {
         paths:PATHS
     },
     entry :{
-        app: PATHS.src
+        app: PATHS.src,
         // app: './src/index.js'
         // second: './src/index.js'
+        lk: `${PATHS.src}/lk.js`
     },
     output: {
     // main.js -> [name].js -> app.js
         // filename: '[name].js',
         // path: path.resolve(__dirname, './dist'),
         // publicPath: '/dist'
-            filename: `${PATHS.assets}js/[name].js`,
+            filename: `${PATHS.assets}js/[name].[hash].js`,
             path: PATHS.dist,
             publicPath: '/'
 
@@ -135,12 +136,13 @@ module.exports = {
             // Options similar to the same options in webpackOptions.output
             // both options are optional
             // filename: '[name].css' // entry -> app.css will be
-            filename: `${PATHS.assets}css/[name].css`,
+            filename: `${PATHS.assets}css/[name].[hash].css`,
           }),
           new HtmlWebpackPlugin({
               hash: false,
               template:`${PATHS.src}/index.html`,
-              filename:'./index.html'
+              filename:'./index.html',
+            //   inject: false
           }),
           new CopyWebpackPlugin([
               {from: `${PATHS.src}/img`, to: `${PATHS.assets}img`},
