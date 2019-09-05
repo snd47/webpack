@@ -19,7 +19,9 @@ import store from './store'
 
 // Vue.component('example-component', require('./'))
 
-Vue.component('example-component', require('./components/Example.vue').default)
+// Vue.component('example-component', require('./components/Example.vue').default)
+
+Vue.component('modal-component', require('./components/ModalValidate.vue').default)
 
 const app = new Vue({
     data () {
