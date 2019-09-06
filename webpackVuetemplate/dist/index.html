@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link rel="stylesheet" href="/dist/app.css"> -->
     <title>Webpack</title>
-<link href="/assets/css/app.5bd35c556e808b14be78.css" rel="stylesheet"></head>
+<link href="/assets/css/app.b7d74e158a8e392519ac.css" rel="stylesheet"></head>
 <body>
     <div class="wrapper">
         <div id="app">
@@ -36,6 +36,11 @@
                     </div>
                 </section>
                 <example-component v-if="component"></example-component>
+                <!-- <modal-component>Modal</modal-component> -->
+
+                <button class="btn btnPrimary" @click="modalView= !modalView">Show modal with form + validate</button>
+                    <modal-component v-show="modalView" @close="modalView=false" />
+
                 <footer>
                     
                 </footer>
@@ -47,5 +52,5 @@
     
 
     <!-- <script src="/dist/app.js"></script> -->
-<script type="text/javascript" src="/assets/js/vendors.5bd35c556e808b14be78.js"></script><script type="text/javascript" src="/assets/js/app.5bd35c556e808b14be78.js"></script><script type="text/javascript" src="/assets/js/lk.5bd35c556e808b14be78.js"></script></body>
+<script type="text/javascript" src="/assets/js/vendors.b7d74e158a8e392519ac.js"></script><script type="text/javascript" src="/assets/js/app.b7d74e158a8e392519ac.js"></script><script type="text/javascript" src="/assets/js/lk.b7d74e158a8e392519ac.js"></script></body>
 </html>

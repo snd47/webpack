@@ -36,7 +36,11 @@
                     </div>
                 </section>
                 <example-component v-if="component"></example-component>
-                <modal-component></modal-component>
+                <!-- <modal-component>Modal</modal-component> -->
+
+                <button class="btn btnPrimary" @click="modalView= !modalView">Show modal with form + validate</button>
+                    <modal-component v-show="modalView" @close="modalView=false" />
+
                 <footer>
                     
                 </footer>

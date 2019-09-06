@@ -14,19 +14,25 @@ import './assets/scss/main.scss'
 //3
 window.Vue = require('vue')
 
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
+
 import store from './store'
 // import './store'
 
 // Vue.component('example-component', require('./'))
 
-// Vue.component('example-component', require('./components/Example.vue').default)
+Vue.component('example-component', require('./components/Example.vue').default)
 
-Vue.component('modal-component', require('./components/ModalValidate.vue').default)
+Vue.component('modal-component', require('./components/Modal.vue').default)
+
+
 
 const app = new Vue({
     data () {
         return {
-            component: false
+            component: false,
+            modalView: false
         }
     },
 
