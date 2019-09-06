@@ -20,6 +20,10 @@ html {
   }
 }
 
+input {
+  border: 1px solid $border-lighter;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -94,3 +98,7 @@ section, .section {
 @import "modules/my-module.scss";
 
 @import "modules/wrapper.scss";
+
+@import "common/buttons.scss";
+
+@import "common/controls.scss";
