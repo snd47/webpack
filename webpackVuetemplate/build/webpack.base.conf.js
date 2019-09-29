@@ -3,6 +3,9 @@
 
 //  include path as module
 const path = require('path')
+
+const fs = require('fs')
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
  
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -18,8 +21,9 @@ const PATHS = {
     // assets: 'static/'
 }
 
-// const PAGES_DIR = PATHS.src
-// const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.html'))
+//const PAGES_DIR = PATHS.src
+const PAGES_DIR = `${PATHS.src}/html`
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.html'))
 
 module.exports = {
     // export const (such as PATHS) to other conf
@@ -151,20 +155,20 @@ module.exports = {
             // filename: '[name].css' // entry -> app.css will be
             filename: `${PATHS.assets}css/[name].[hash].css`,
           }),
-          new HtmlWebpackPlugin({
-              hash: false,
-              template:`${PATHS.src}/index.html`,
-              filename:'./index.html',
-            //   inject: false
-          }),
+        //   new HtmlWebpackPlugin({
+        //       hash: false,
+        //       template:`${PATHS.src}/index.html`,
+        //       filename:'./index.html',
+        //                     //   inject: false
+        //   }),
           new CopyWebpackPlugin([
               {from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`},
               {from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
               {from: `${PATHS.src}/static`, to: ``}
           ]),
-        //   ...PAGES.map(page => new HtmlWebpackPlugin({
-        //     template: `${PAGES_DIR}/${page}`,
-        //     filename: `./${page}`
-        //   }))
+          ...PAGES.map(page => new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/${page}`,
+            filename: `./${page}`
+          }))
     ]
 }
