@@ -103,6 +103,11 @@ export default {
           sameAsPassword: sameAs('password')
         }
   },
+  created() {
+    let view = this.$store.getters.getModalView
+    console.log(view)
+    
+  },
   methods: {
     onSubmit () {
       this.$v.$touch()

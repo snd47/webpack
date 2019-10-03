@@ -18,6 +18,7 @@
     },
     created() {
         this.message = this.$store.getters.getMessage
+        // let view = this.$store.getters.getModalView // remove it
     }
 }
 </script>
