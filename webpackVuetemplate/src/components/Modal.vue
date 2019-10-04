@@ -104,7 +104,7 @@ export default {
         }
   },
   created() {
-    let view = this.$store.getters.getModalView
+    let view = this.$store.getters.getMo
     console.log(view)
     
   },

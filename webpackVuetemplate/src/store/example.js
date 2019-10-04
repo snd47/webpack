@@ -1,7 +1,7 @@
 export default {
     state :{
         message: 'hello vuex',
-         modalView: 'Login'
+         modalView: 'Login example'
 
     },
     mutations: {},

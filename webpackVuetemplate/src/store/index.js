@@ -9,15 +9,15 @@ export default new Vuex.Store({
     modules: {
         example
     },
-    // state: {
-    //     modalView: 'Login 1',
-    //     mo: 'mm'
-    // },
-    // mutations: {},
-    // actions: {},
-    // gettetrs: {
-    //     getMo (state) {
-    //         return state.mo
-    // }
-    // }
+    state: {
+        modalView: 'Login 1',
+        mo: 'mm'
+    },
+    mutations: {},
+    actions: {},
+    getters: {
+        getMo (state) {
+            return state.modalView
+    }
+    }
 })

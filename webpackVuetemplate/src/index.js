@@ -14,11 +14,13 @@ import './assets/scss/main.scss'
 //3
 window.Vue = require('vue')
 
+import store from './store'
+// import './store'
+
 import Vuelidate from 'vuelidate'
 Vue.use(Vuelidate)
 
-import store from './store'
-// import './store'
+
 
 // Vue.component('example-component', require('./'))
 
